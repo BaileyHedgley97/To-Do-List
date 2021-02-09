@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://media.istockphoto.com/vectors/green-chalkboard-background-vector-vector-id499427320?k=6&m=499427320&s=170667a&w=0&h=05S2pyir5S_ZI74jkWU3aJcvyQ_GZIKU5sRe3z-QD3s=); 
+    background-size: cover;
+    background-position: center;
+    color: rgba(255, 255, 255, 0.582);
+    font-family: "Titillium Web", sans-serif;
+    min-height: 100vh;
+    text-align: center;
+    padding-top: 30px;
+}
+
+header{
+    font-size: 1.5rem;
+}
+
+button{
+    cursor: pointer;
+}
+
+.p{
+    cursor: pointer;
+}
+
+.addTask{
+    width: 100%;
+    padding: 10px 0;
+}
+
+.addTask > input[type="Text"]{
+    background: none;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+}
+
+.addTask button{
+    margin: 0 10px;
+    font-size: 15px;
+    padding: 5px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: none;
+}
+
+.addTask button:hover{
+    background-color: indianred;
+    color: white;
+}
+
+.notCompleted, .Completed{
+    margin: 20px 0;
+    padding: 20px;
+}
+h3{
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+ol{
+    list-style: none;
+    counter-reset: my-counter;
+}
+
+ol li{
+    width: 100%;
+    padding: 8px;
+    margin: 3px 0;
+    font-size: 20px;
+    counter-increment: my-counter;
+}
+
+ol.Completed li{
+    color: rgb(255, 255, 255);
+}
+
+ol.notCompleted li{
+    color: rgb(255, 255, 255);
+}
+
+ol li::before{
+    content: counter(my-counter);
+    background: black;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 30%;
+    display: inline-block;
+    line-height: 2rem;
+    text-align: center;
+    color: white;
+    margin-right: 0.8rem;
+}
+
+li button{
+    float: right 30%;
+    padding: 5px;
+    font-size: 15px;
+    line-height: 15px;
+    margin-right: 3px;
+    margin-left: 10px;
+    background: none;
+    border: 2px solid black;
+    outline: none;
+    cursor: pointer;
+}
